@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Selector de Color RGB</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="Assets/Css/Styles.css">
+</head>
+<body class="bg-light">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">RGB Color Picker</a>
+    </div>
+</nav>
+
+<!-- Contenido principal -->
+<div class="container py-1">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+
+            <!-- Card principal -->
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-2">Selector de Color RGB</h3>
+
+                    <!-- Controles con sliders e inputs -->
+                    <div class="mb-3">
+                        <label class="form-label">Rojo (R)</label>
+                        <input type="range" class="form-range" min="0" max="255" id="red">
+                        <input type="number" class="form-control mt-2" min="0" max="255" id="redNum">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Verde (G)</label>
+                        <input type="range" class="form-range" min="0" max="255" id="green">
+                        <input type="number" class="form-control mt-2" min="0" max="255" id="greenNum">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Azul (B)</label>
+                        <input type="range" class="form-range" min="0" max="255" id="blue">
+                        <input type="number" class="form-control mt-2" min="0" max="255" id="blueNum">
+                    </div>
+
+                    <!-- Color Picker -->
+                    <div class="mb-3">
+                        <label class="form-label">Color Picker</label>
+                        <input type="color" class="form-control form-control-color" id="colorPicker" value="#000000">
+                    </div>
+
+                    <!-- Recuadro de color -->
+                    <div id="colorBox" class="color-box mb-3"></div>
+
+                    <!-- Valores RGB y HEX -->
+                    <p class="text-center fw-bold">
+                        RGB: <span id="rgbValue">rgb(0, 0, 0)</span>
+                    </p>
+                    <p class="text-center fw-bold">
+                        HEX: <span id="hexValue">#000000</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-light text-center py-1 mt-1">
+    <div>Desarrollado por: Jairo Pineda Sanchez</div>
+    <div>Email: jops1272@gmail.com | GitHub: https://github.com/jairops1272</div>
+</footer>
+
+<!-- JS -->
+<script src="Assets/Js/Script.js"></script>
+</body>
+</html>
