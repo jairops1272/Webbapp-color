@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <title>Selector de Color RGB</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="./assets/img/favicon.png" type="image/png">
-
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- CSS propio -->
@@ -19,57 +16,66 @@
 <!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark">
     <div class="container">
-        <span class="navbar-brand mb-0 h1">RGB Color Picker</span>
+        <span class="navbar-brand">RGB Color Picker</span>
     </div>
 </nav>
 
-<!-- Contenido principal -->
 <div class="container py-4">
     <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-8">
+        <div class="col-lg-10">
 
             <div class="card shadow-lg">
                 <div class="card-body">
 
                     <h3 class="text-center mb-4">Selector de Color RGB</h3>
 
-                    <!-- Rojo -->
-                    <div class="mb-3">
-                        <label class="form-label">Rojo (R)</label>
-                        <input type="range" class="form-range" min="0" max="255" id="red">
-                        <input type="number" class="form-control mt-2" min="0" max="255" id="redNum">
+                    <!-- DOS COLUMNAS -->
+                    <div class="row">
+
+                        <!-- COLUMNA IZQUIERDA: CONTROLES -->
+                        <div class="col-md-6">
+
+                            <div class="mb-3">
+                                <label class="form-label">Rojo (R)</label>
+                                <input type="range" class="form-range" min="0" max="255" id="red">
+                                <input type="number" class="form-control mt-2" min="0" max="255" id="redNum">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Verde (G)</label>
+                                <input type="range" class="form-range" min="0" max="255" id="green">
+                                <input type="number" class="form-control mt-2" min="0" max="255" id="greenNum">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Azul (B)</label>
+                                <input type="range" class="form-range" min="0" max="255" id="blue">
+                                <input type="number" class="form-control mt-2" min="0" max="255" id="blueNum">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Color Picker</label>
+                                <input type="color" class="form-control form-control-color" id="colorPicker">
+                            </div>
+
+                        </div>
+
+                        <!-- COLUMNA DERECHA: RESULTADO -->
+                        <div class="col-md-6 d-flex flex-column align-items-center">
+
+                            <div id="colorBox" class="color-box"></div>
+
+                            <p class="fw-bold mt-3">
+                                RGB: <span id="rgbValue">rgb(0, 0, 0)</span>
+                            </p>
+
+                            <p class="fw-bold">
+                                HEX: <span id="hexValue">#000000</span>
+                            </p>
+
+                        </div>
+
                     </div>
-
-                    <!-- Verde -->
-                    <div class="mb-3">
-                        <label class="form-label">Verde (G)</label>
-                        <input type="range" class="form-range" min="0" max="255" id="green">
-                        <input type="number" class="form-control mt-2" min="0" max="255" id="greenNum">
-                    </div>
-
-                    <!-- Azul -->
-                    <div class="mb-3">
-                        <label class="form-label">Azul (B)</label>
-                        <input type="range" class="form-range" min="0" max="255" id="blue">
-                        <input type="number" class="form-control mt-2" min="0" max="255" id="blueNum">
-                    </div>
-
-                    <!-- Color Picker -->
-                    <div class="mb-3">
-                        <label class="form-label">Color Picker</label>
-                        <input type="color" class="form-control form-control-color" id="colorPicker" value="#000000">
-                    </div>
-
-                    <!-- CUADRO DE COLOR (ESTE ES EL QUE FALTABA VISUALMENTE) -->
-                    <div id="colorBox" class="color-box"></div>
-
-                    <!-- Valores -->
-                    <p class="text-center fw-bold mt-3">
-                        RGB: <span id="rgbValue">rgb(0, 0, 0)</span>
-                    </p>
-                    <p class="text-center fw-bold">
-                        HEX: <span id="hexValue">#000000</span>
-                    </p>
 
                 </div>
             </div>
@@ -78,13 +84,10 @@
     </div>
 </div>
 
-<!-- Footer -->
 <footer class="bg-dark text-light text-center py-2 mt-4">
     <div>Desarrollado por: Jairo Pineda Sanchez</div>
-    <div>Email: jops1272@gmail.com | GitHub: jairops1272</div>
 </footer>
 
-<!-- JS -->
 <script src="./assets/js/script.js"></script>
 </body>
 </html>
